@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
   s.name         = "NaturaliSDK"
-  s.version      = "0.0.1"
+  s.version      = "0.0.1.2"
   s.summary      = "NaturaliSDK"
 
   s.description  = <<-DESC
