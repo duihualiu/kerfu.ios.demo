@@ -10,7 +10,7 @@ Pod::Spec.new do |s|
                    DESC
 
   s.homepage     = "https://www.naturali.io"
-  s.source       = {:git => "https://github.com/jfang137/naturali_sdk_source.git", :tag => '0.0.1.1'}
+  s.source       = {:git => "https://github.com/jfang137/naturali_sdk_source.git", :tag => '0.0.1.2'}
   s.license      = { :type => 'naturali私有', :text => <<-LICENSE
                       Copyright 2018
                       naturali私有
