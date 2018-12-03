@@ -11,7 +11,11 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://www.naturali.io"
   s.source       = {:git => "https://github.com/jfang137/naturali_sdk_source.git", :tag => '0.0.1.3'}
-  s.license      = "MIT"
+  s.license      = { :type => 'MIT', :text => <<-LICENSE
+                   	Copyright 2018
+  			Permission is granted to Naturali
+                 	LICENSE
+               	   }
   s.author       = { 'fy' => 'yi.fang@naturali.io' }
 
   s.platform     = :ios, '8.0'
