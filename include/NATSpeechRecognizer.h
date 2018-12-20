@@ -17,12 +17,7 @@
  */
 @property(nonatomic,weak) id<NATSpeechRecognizerDelegate> delegate;
 
-/*!
- *  返回识别对象的单例
- *
- *  @return 识别对象的单例
- */
-+ (instancetype)sharedInstance;
+- (instancetype)initWithDelegate:(id<NATSpeechRecognizerDelegate>)delegate;
 
 /*!
  *  开始识别

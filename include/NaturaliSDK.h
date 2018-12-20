@@ -10,12 +10,12 @@
 
 #import "NATSpeechRecognizer.h"
 #import "NATSpeechRecognizerDelegate.h"
-#import "NADialogManager.h"
+#import "NATDialogManager.h"
 
 @interface NaturaliSDK : NSObject
 
 + (instancetype)sharedInstance;
-+ (void)registerAppId:(NSString *)inAppId;
++ (void)registerAppId:(NSString *)inAppId appSecrit:(NSString *)appSecret;
 + (void)setUserId:(NSString *)userId;
 
 @end

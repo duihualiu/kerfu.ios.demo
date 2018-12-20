@@ -29,6 +29,5 @@ Pod::Spec.new do |s|
   }
   s.frameworks = 'AudioToolbox'
   s.dependency 'Protobuf'
-  s.dependency 'gRPC-ProtoRPC'
 
 end
