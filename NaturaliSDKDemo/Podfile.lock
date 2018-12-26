@@ -1,0 +1,26 @@
+PODS:
+  - FMDB (2.7.5):
+    - FMDB/standard (= 2.7.5)
+  - FMDB/standard (2.7.5)
+  - NaturaliSDK (0.0.1.7):
+    - FMDB
+    - Protobuf
+  - Protobuf (3.6.1)
+
+DEPENDENCIES:
+  - NaturaliSDK
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - FMDB
+    - NaturaliSDK
+    - Protobuf
+
+SPEC CHECKSUMS:
+  FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
+  NaturaliSDK: 2e93db941f85c75934fda4984f0ccf099cebd997
+  Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
+
+PODFILE CHECKSUM: c410a1d3c5ec3bcc5838ab01a98365a051d21955
+
+COCOAPODS: 1.6.0.beta.2
