@@ -14,8 +14,23 @@
 
 @interface NaturaliSDK : NSObject
 
-+ (instancetype)sharedInstance;
-+ (void)registerAppId:(NSString *)inAppId appSecrit:(NSString *)appSecret;
+/**
+ 注册app于naturali开放平台上的参数
+
+ @param appId 平台注册的appId
+ @param appKey 平台发放的appKey
+ @param appSecret 平台发放的appsSecret
+ */
++ (void)registerAppId:(NSString *)appId
+               appKey:(NSString *)appKey
+            appSecret:(NSString *)appSecret;
+
+
+/**
+ 设置用户id
+
+ @param userId sdk集成者可使用自己app用户体系中的userId
+ */
 + (void)setUserId:(NSString *)userId;
 
 @end

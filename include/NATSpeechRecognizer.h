@@ -17,6 +17,9 @@
  */
 @property(nonatomic,weak) id<NATSpeechRecognizerDelegate> delegate;
 
+/**
+ 初始化方法，需传入delegate对象以监听状态及返回
+ */
 - (instancetype)initWithDelegate:(id<NATSpeechRecognizerDelegate>)delegate;
 
 /*!
@@ -35,6 +38,17 @@
  *  取消本次会话
  */
 - (void)cancelRecording;
+
+
+/**
+ 直接以语音形式发起与对应agent对话的请求,发送成功的消息及收到的回复均会回调NADialogFlowDelegate的"didReceiveResponse:"方法.
+ 传入的agentId或sessionId至少一个不为空.
+
+ @param agentId 传入需要对话的agentId
+ @param sessionId 传入需要对话的sessionId
+ @return 成功返回YES；失败返回NO
+ */
+- (BOOL)startDialogRecordingWithAgentId:(NSString *)agentId;
 
 @end
 

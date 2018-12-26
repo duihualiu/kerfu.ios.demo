@@ -24,8 +24,9 @@
 
  @param result 随着语音的录制持续输出匹配度最高的结果.
  @param isDone 当调用"stopRecording"后，语音录制过程结束，此时转文字输出isDone值为YES,否则为NO.
+ @param voiceUrl 当isDone为YES时，同时下发该录音的资源地址,对话流请求中将voiceUrl传入audioUrl中可提高对话的准确度。
  */
-- (void)onResult:(NSString *)result isDone:(BOOL)isDone;
+- (void)onResult:(NSString *)result isDone:(BOOL)isDone voiceUrl:(NSString *)voiceUrl;
 
 @optional
 
