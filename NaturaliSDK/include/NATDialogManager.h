@@ -14,6 +14,7 @@
 @class NATDialogRequest,NATDialogResponse;
 
 typedef void (^NADialogRequestCompletion) (BOOL success, NSError *error);
+typedef void (^NATDialogUploadProgress)(float uploadProgress);
 
 @protocol NADialogFlowDelegate <NSObject>
 
@@ -54,6 +55,15 @@ typedef void (^NADialogRequestCompletion) (BOOL success, NSError *error);
  @param completion 反馈消息是否发送成功，回复的消息将通过delegate监听接收
  */
 - (void)sendDialogRequest:(NATDialogRequest *)request compeltion:(NADialogRequestCompletion)completion;
+
+/**
+ 发送消息
+ 
+ @param request 需要发送消息对象
+ @param uploadProgress 若发送的消息包含多媒体资源，可传入此block监听资源上传的进度
+ @param completion 反馈消息是否发送成功，回复的消息将通过delegate监听接收
+ */
+- (void)sendDialogRequest:(NATDialogRequest *)request uploadProgress:(NATDialogUploadProgress)uploadProgress compeltion:(NADialogRequestCompletion)completion;
 
 /**
  向服务agent发送开始对话的信号
