@@ -13,8 +13,8 @@
 
 @class NATDialogRequest,NATDialogResponse;
 
-typedef void (^NADialogRequestCompletion) (BOOL success, NSError *error);
-typedef void (^NATDialogUploadProgress)(float uploadProgress);
+typedef void (^NADialogRequestCompletion) (BOOL success, NSError *error, NSString *requestId);
+typedef void (^NATDialogUploadProgress)(float uploadProgress, NSString *requestId);
 
 @protocol NADialogFlowDelegate <NSObject>
 

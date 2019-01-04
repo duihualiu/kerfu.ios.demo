@@ -29,6 +29,11 @@ typedef NS_ENUM(NSInteger, NATMessageSenderType) {
 @interface NATDialogResponse : NSObject
 
 /**
+ 若response为用户发送成功的消息，则发送时传入或生成的requestId将会通过此处传回
+ */
+@property (nonatomic, copy ) NSString             *requestId;
+
+/**
  为回复消息下发的id
  */
 @property (nonatomic, copy  ) NSString            *messageId;
