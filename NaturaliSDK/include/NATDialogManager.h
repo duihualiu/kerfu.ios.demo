@@ -73,11 +73,19 @@ typedef void (^NATDialogUploadProgress)(float uploadProgress, NSString *requestI
  */
 - (void)fetchWelcomeMessageWithAgentId:(NSString *)agentId compeltion:(NADialogRequestCompletion)completion;
 
+
+/**
+ 结束与agent的对话上下文，再次发送对agnetId发送的消息可开始新的对话
+
+ @param agentId 需要结束对话的agentId
+ @param completion 结束请求成功与否的d回调.
+ */
+- (void)endConversationWithAgentId:(NSString *)agentId compeltion:(NADialogRequestCompletion)completion;
+
 /**
  加载设定用户的历史消息列表
  */
 - (NSArray<NATDialogResponse *> *)loadHistoryMessages;
-
 
 /**
  删除对应messageId的消息，成功则返回true
