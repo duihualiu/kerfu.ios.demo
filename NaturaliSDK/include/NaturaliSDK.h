@@ -11,6 +11,7 @@
 #import "NATSpeechRecognizer.h"
 #import "NATSpeechRecognizerDelegate.h"
 #import "NATDialogManager.h"
+#import "NATDynamicEntity.h"
 
 @interface NaturaliSDK : NSObject
 
@@ -32,5 +33,20 @@
  @param userId sdk集成者可使用自己app用户体系中的userId
  */
 + (void)setUserId:(NSString *)userId;
+
+/**
+ 为设置的userId添加动态实体
+
+ @param entities 动态实体数组
+ */
++ (void)addDynamicEntities:(NSArray<NATDynamicEntity *> *)entities;
+
+/**
+ 为指定的userId添加动态实体
+
+ @param entities 动态实体数组
+ @param userId 指定userId
+ */
++ (void)addDynamicEntities:(NSArray<NATDynamicEntity *> *)entities forUserId:(NSString *)userId;
 
 @end

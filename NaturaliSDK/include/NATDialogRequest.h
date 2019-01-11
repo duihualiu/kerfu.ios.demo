@@ -11,7 +11,7 @@
 @interface NATDialogRequest : NSObject
 
 /**
- 用户可给此属性赋值，应保证此值得唯一性，若未赋值，在请求发出时将自动生成requestId,并在请求的回调和接收发送成功的消息中传回，以达成请求与回复的匹配。
+ 用户可给此属性赋值，应保证此值的唯一性，若未赋值，在请求发出时将自动生成requestId,并在请求的回调和接收发送成功的消息中传回，以达成请求与回复的匹配。
  */
 @property (nonatomic, copy) NSString *requestId;
 
