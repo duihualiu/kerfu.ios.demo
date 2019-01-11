@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31AE7C221E8707100D9945F /* libNaturaliSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31AE7C121E8707100D9945F /* libNaturaliSDK.a */; };
 		A38C8CD221D329640023741F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A38C8CD121D329640023741F /* AppDelegate.m */; };
 		A38C8CD521D329640023741F /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A38C8CD421D329640023741F /* ViewController.mm */; };
 		A38C8CD821D329640023741F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A38C8CD621D329640023741F /* Main.storyboard */; };
 		A38C8CDA21D329660023741F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A38C8CD921D329660023741F /* Assets.xcassets */; };
 		A38C8CDD21D329660023741F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A38C8CDB21D329660023741F /* LaunchScreen.storyboard */; };
 		A38C8CE021D329660023741F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A38C8CDF21D329660023741F /* main.m */; };
-		A38C8CF221D32A390023741F /* libNaturaliSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A38C8CF121D32A390023741F /* libNaturaliSDK.a */; };
 		A38C8CFF21D32B430023741F /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = A38C8CF521D32B430023741F /* FMDatabase.m */; };
 		A38C8D0021D32B430023741F /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = A38C8CF721D32B430023741F /* FMDatabaseAdditions.m */; };
 		A38C8D0121D32B430023741F /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = A38C8CFC21D32B430023741F /* FMResultSet.m */; };
@@ -47,6 +47,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A31AE7BA21E8707100D9945F /* NATSpeechRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATSpeechRecognizer.h; sourceTree = "<group>"; };
+		A31AE7BB21E8707100D9945F /* NATDialogResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDialogResponse.h; sourceTree = "<group>"; };
+		A31AE7BC21E8707100D9945F /* NaturaliSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaturaliSDK.h; sourceTree = "<group>"; };
+		A31AE7BD21E8707100D9945F /* NATDialogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDialogManager.h; sourceTree = "<group>"; };
+		A31AE7BE21E8707100D9945F /* NATDialogRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDialogRequest.h; sourceTree = "<group>"; };
+		A31AE7BF21E8707100D9945F /* NATDynamicEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDynamicEntity.h; sourceTree = "<group>"; };
+		A31AE7C021E8707100D9945F /* NATSpeechRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATSpeechRecognizerDelegate.h; sourceTree = "<group>"; };
+		A31AE7C121E8707100D9945F /* libNaturaliSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNaturaliSDK.a; sourceTree = "<group>"; };
 		A38C8CCD21D329640023741F /* NOPodSdkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NOPodSdkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38C8CD021D329640023741F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A38C8CD121D329640023741F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -57,16 +65,6 @@
 		A38C8CDC21D329660023741F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A38C8CDE21D329660023741F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A38C8CDF21D329660023741F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		A38C8CE821D32A390023741F /* NADialogResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADialogResponse.h; sourceTree = "<group>"; };
-		A38C8CE921D32A390023741F /* NATSpeechRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATSpeechRecognizer.h; sourceTree = "<group>"; };
-		A38C8CEA21D32A390023741F /* NADialogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADialogManager.h; sourceTree = "<group>"; };
-		A38C8CEB21D32A390023741F /* NATDialogResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDialogResponse.h; sourceTree = "<group>"; };
-		A38C8CEC21D32A390023741F /* NaturaliSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaturaliSDK.h; sourceTree = "<group>"; };
-		A38C8CED21D32A390023741F /* NATDialogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDialogManager.h; sourceTree = "<group>"; };
-		A38C8CEE21D32A390023741F /* NATDialogRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDialogRequest.h; sourceTree = "<group>"; };
-		A38C8CEF21D32A390023741F /* NATSpeechRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATSpeechRecognizerDelegate.h; sourceTree = "<group>"; };
-		A38C8CF021D32A390023741F /* NADialogRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NADialogRequest.h; sourceTree = "<group>"; };
-		A38C8CF121D32A390023741F /* libNaturaliSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNaturaliSDK.a; sourceTree = "<group>"; };
 		A38C8CF421D32B430023741F /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
 		A38C8CF521D32B430023741F /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		A38C8CF621D32B430023741F /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
@@ -148,14 +146,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31AE7C221E8707100D9945F /* libNaturaliSDK.a in Frameworks */,
 				A38C8D0621D32B600023741F /* AudioToolbox.framework in Frameworks */,
-				A38C8CF221D32A390023741F /* libNaturaliSDK.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A31AE7B921E8707100D9945F /* include */ = {
+			isa = PBXGroup;
+			children = (
+				A31AE7BA21E8707100D9945F /* NATSpeechRecognizer.h */,
+				A31AE7BB21E8707100D9945F /* NATDialogResponse.h */,
+				A31AE7BC21E8707100D9945F /* NaturaliSDK.h */,
+				A31AE7BD21E8707100D9945F /* NATDialogManager.h */,
+				A31AE7BE21E8707100D9945F /* NATDialogRequest.h */,
+				A31AE7BF21E8707100D9945F /* NATDynamicEntity.h */,
+				A31AE7C021E8707100D9945F /* NATSpeechRecognizerDelegate.h */,
+			);
+			path = include;
+			sourceTree = "<group>";
+		};
 		A38C8CC421D329640023741F = {
 			isa = PBXGroup;
 			children = (
@@ -195,26 +207,10 @@
 		A38C8CE621D32A210023741F /* sdk */ = {
 			isa = PBXGroup;
 			children = (
-				A38C8CE721D32A390023741F /* include */,
-				A38C8CF121D32A390023741F /* libNaturaliSDK.a */,
+				A31AE7B921E8707100D9945F /* include */,
+				A31AE7C121E8707100D9945F /* libNaturaliSDK.a */,
 			);
 			path = sdk;
-			sourceTree = "<group>";
-		};
-		A38C8CE721D32A390023741F /* include */ = {
-			isa = PBXGroup;
-			children = (
-				A38C8CE821D32A390023741F /* NADialogResponse.h */,
-				A38C8CE921D32A390023741F /* NATSpeechRecognizer.h */,
-				A38C8CEA21D32A390023741F /* NADialogManager.h */,
-				A38C8CEB21D32A390023741F /* NATDialogResponse.h */,
-				A38C8CEC21D32A390023741F /* NaturaliSDK.h */,
-				A38C8CED21D32A390023741F /* NATDialogManager.h */,
-				A38C8CEE21D32A390023741F /* NATDialogRequest.h */,
-				A38C8CEF21D32A390023741F /* NATSpeechRecognizerDelegate.h */,
-				A38C8CF021D32A390023741F /* NADialogRequest.h */,
-			);
-			path = include;
 			sourceTree = "<group>";
 		};
 		A38C8CF321D32B310023741F /* FMDB */ = {

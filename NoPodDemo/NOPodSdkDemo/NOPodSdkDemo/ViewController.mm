@@ -44,10 +44,25 @@
     
     //设置对话流的代理对象，用于接收对话消息.
     [NATDialogManager sharedInstance].delegate = self;
+    
+    
+    //如果用户需要添加动态实体，可如下方式添加
+    NATDynamicEntityValue *value1 = [NATDynamicEntityValue new];
+    value1.keyword = @"keyword1";
+    value1.aliases = @[@"alias1",@"alias2"];
+    
+    NATDynamicEntityValue *value2 = [NATDynamicEntityValue new];
+    value2.keyword = @"keyword2";
+    value2.aliases = @[@"alias3",@"alias4"];
+    
+    NATDynamicEntity *entity = [NATDynamicEntity new];
+    entity.typeName = @"typeName1";
+    entity.values = @[value1,value2];
+    
+    [NaturaliSDK addDynamicEntities:@[entity]];
 }
 
 - (IBAction)touchButtonDown:(id)sender {
-    [self stopRecord:nil];
     if (!self.agentIdLabel.text.length) {
         NSLog(@"未输入agentId");
         return;
@@ -64,7 +79,7 @@
     NATDialogRequest *request = [[NATDialogRequest alloc] init];
     request.query = query;
     request.agentId = self.agentIdLabel.text;
-    [[NATDialogManager sharedInstance] sendDialogRequest:request compeltion:^(BOOL success, NSError *error) {
+    [[NATDialogManager sharedInstance] sendDialogRequest:request compeltion:^(BOOL success, NSError *error, NSString *reqId) {
         if (error) {
             NSLog(@"发送对话发生错误：\n%@",error);
         } else if (success) {
