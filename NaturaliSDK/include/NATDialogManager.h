@@ -49,6 +49,11 @@ typedef void (^NATDialogUploadProgress)(float uploadProgress, NSString *requestI
 - (void)keepConnection;
 
 /**
+ 重置连接
+ */
+- (void)resetConnection;
+
+/**
  发送消息
 
  @param request 需要发送消息对象
