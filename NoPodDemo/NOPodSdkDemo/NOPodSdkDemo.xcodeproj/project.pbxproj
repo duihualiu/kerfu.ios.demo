@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A31AE7C221E8707100D9945F /* libNaturaliSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A31AE7C121E8707100D9945F /* libNaturaliSDK.a */; };
+		A35B12B722116AB400B06A49 /* libKerfuSDK.a in Frameworks */ = {isa = PBXBuildFile; fileRef = A35B12B622116AB400B06A49 /* libKerfuSDK.a */; };
 		A38C8CD221D329640023741F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A38C8CD121D329640023741F /* AppDelegate.m */; };
 		A38C8CD521D329640023741F /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = A38C8CD421D329640023741F /* ViewController.mm */; };
 		A38C8CD821D329640023741F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A38C8CD621D329640023741F /* Main.storyboard */; };
@@ -47,14 +47,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		A31AE7BA21E8707100D9945F /* NATSpeechRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATSpeechRecognizer.h; sourceTree = "<group>"; };
-		A31AE7BB21E8707100D9945F /* NATDialogResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDialogResponse.h; sourceTree = "<group>"; };
-		A31AE7BC21E8707100D9945F /* NaturaliSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NaturaliSDK.h; sourceTree = "<group>"; };
-		A31AE7BD21E8707100D9945F /* NATDialogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDialogManager.h; sourceTree = "<group>"; };
-		A31AE7BE21E8707100D9945F /* NATDialogRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDialogRequest.h; sourceTree = "<group>"; };
-		A31AE7BF21E8707100D9945F /* NATDynamicEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATDynamicEntity.h; sourceTree = "<group>"; };
-		A31AE7C021E8707100D9945F /* NATSpeechRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NATSpeechRecognizerDelegate.h; sourceTree = "<group>"; };
-		A31AE7C121E8707100D9945F /* libNaturaliSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libNaturaliSDK.a; sourceTree = "<group>"; };
+		A35B12AF22116AB400B06A49 /* KerfuSDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KerfuSDK.h; sourceTree = "<group>"; };
+		A35B12B022116AB400B06A49 /* KFDynamicEntity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFDynamicEntity.h; sourceTree = "<group>"; };
+		A35B12B122116AB400B06A49 /* KFDialogRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFDialogRequest.h; sourceTree = "<group>"; };
+		A35B12B222116AB400B06A49 /* KFDialogResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFDialogResponse.h; sourceTree = "<group>"; };
+		A35B12B322116AB400B06A49 /* KFDialogManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFDialogManager.h; sourceTree = "<group>"; };
+		A35B12B422116AB400B06A49 /* KFSpeechRecognizerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFSpeechRecognizerDelegate.h; sourceTree = "<group>"; };
+		A35B12B522116AB400B06A49 /* KFSpeechRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = KFSpeechRecognizer.h; sourceTree = "<group>"; };
+		A35B12B622116AB400B06A49 /* libKerfuSDK.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libKerfuSDK.a; sourceTree = "<group>"; };
 		A38C8CCD21D329640023741F /* NOPodSdkDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NOPodSdkDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A38C8CD021D329640023741F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		A38C8CD121D329640023741F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -146,7 +146,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A31AE7C221E8707100D9945F /* libNaturaliSDK.a in Frameworks */,
+				A35B12B722116AB400B06A49 /* libKerfuSDK.a in Frameworks */,
 				A38C8D0621D32B600023741F /* AudioToolbox.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,16 +154,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A31AE7B921E8707100D9945F /* include */ = {
+		A35B12AE22116AB400B06A49 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				A31AE7BA21E8707100D9945F /* NATSpeechRecognizer.h */,
-				A31AE7BB21E8707100D9945F /* NATDialogResponse.h */,
-				A31AE7BC21E8707100D9945F /* NaturaliSDK.h */,
-				A31AE7BD21E8707100D9945F /* NATDialogManager.h */,
-				A31AE7BE21E8707100D9945F /* NATDialogRequest.h */,
-				A31AE7BF21E8707100D9945F /* NATDynamicEntity.h */,
-				A31AE7C021E8707100D9945F /* NATSpeechRecognizerDelegate.h */,
+				A35B12AF22116AB400B06A49 /* KerfuSDK.h */,
+				A35B12B022116AB400B06A49 /* KFDynamicEntity.h */,
+				A35B12B122116AB400B06A49 /* KFDialogRequest.h */,
+				A35B12B222116AB400B06A49 /* KFDialogResponse.h */,
+				A35B12B322116AB400B06A49 /* KFDialogManager.h */,
+				A35B12B422116AB400B06A49 /* KFSpeechRecognizerDelegate.h */,
+				A35B12B522116AB400B06A49 /* KFSpeechRecognizer.h */,
 			);
 			path = include;
 			sourceTree = "<group>";
@@ -207,8 +207,8 @@
 		A38C8CE621D32A210023741F /* sdk */ = {
 			isa = PBXGroup;
 			children = (
-				A31AE7B921E8707100D9945F /* include */,
-				A31AE7C121E8707100D9945F /* libNaturaliSDK.a */,
+				A35B12AE22116AB400B06A49 /* include */,
+				A35B12B622116AB400B06A49 /* libKerfuSDK.a */,
 			);
 			path = sdk;
 			sourceTree = "<group>";
