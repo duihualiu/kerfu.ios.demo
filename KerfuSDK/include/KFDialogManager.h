@@ -13,8 +13,8 @@
 
 @class KFDialogRequest,KFDialogResponse;
 
-typedef void (^NADialogRequestCompletion) (BOOL success, NSError *error, NSString *requestId);
-typedef void (^NATDialogUploadProgress)(float uploadProgress, NSString *requestId);
+typedef void (^KFDialogRequestCompletion) (BOOL success, NSError *error, NSString *requestId);
+typedef void (^KFDialogUploadProgress)(float uploadProgress, NSString *requestId);
 
 @protocol KFDialogFlowDelegate <NSObject>
 
@@ -59,7 +59,7 @@ typedef void (^NATDialogUploadProgress)(float uploadProgress, NSString *requestI
  @param request 需要发送消息对象
  @param completion 反馈消息是否发送成功，回复的消息将通过delegate监听接收
  */
-- (void)sendDialogRequest:(KFDialogRequest *)request compeltion:(NADialogRequestCompletion)completion;
+- (void)sendDialogRequest:(KFDialogRequest *)request compeltion:(KFDialogRequestCompletion)completion;
 
 /**
  发送消息
@@ -68,7 +68,7 @@ typedef void (^NATDialogUploadProgress)(float uploadProgress, NSString *requestI
  @param uploadProgress 若发送的消息包含多媒体资源，可传入此block监听资源上传的进度
  @param completion 反馈消息是否发送成功，回复的消息将通过delegate监听接收
  */
-- (void)sendDialogRequest:(KFDialogRequest *)request uploadProgress:(NATDialogUploadProgress)uploadProgress compeltion:(NADialogRequestCompletion)completion;
+- (void)sendDialogRequest:(KFDialogRequest *)request uploadProgress:(KFDialogUploadProgress)uploadProgress compeltion:(KFDialogRequestCompletion)completion;
 
 /**
  向服务agent发送开始对话的信号
@@ -76,7 +76,7 @@ typedef void (^NATDialogUploadProgress)(float uploadProgress, NSString *requestI
  @param agentId app在平台上注册的服务agentId
  @param completion 信号发送成功与否的回调，发送成功的话，delegate将接收到agent回复的欢迎语
  */
-- (void)fetchWelcomeMessageWithAgentId:(NSString *)agentId compeltion:(NADialogRequestCompletion)completion;
+- (void)fetchWelcomeMessageWithAgentId:(NSString *)agentId compeltion:(KFDialogRequestCompletion)completion;
 
 
 /**
@@ -85,7 +85,7 @@ typedef void (^NATDialogUploadProgress)(float uploadProgress, NSString *requestI
  @param agentId 需要结束对话的agentId
  @param completion 结束请求成功与否的d回调.
  */
-- (void)endConversationWithAgentId:(NSString *)agentId compeltion:(NADialogRequestCompletion)completion;
+- (void)endConversationWithAgentId:(NSString *)agentId compeltion:(KFDialogRequestCompletion)completion;
 
 /**
  加载设定用户的历史消息列表
