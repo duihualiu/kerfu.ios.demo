@@ -26,6 +26,11 @@
 @property (nonatomic, copy) NSString *agentId;
 
 /**
+ 平台服务的agentName
+ */
+@property (nonatomic, copy) NSString *agentName;
+
+/**
  会话id，会话场景的id，服务器回复消息时会发放sessionId，若已通过收到的消息获得sessionId，则该会话中再次发送消息请求可传入该消息sessionId，若不传，则服务器根据userId和agentId等参数生成sessionId并在返回发送成功的消息时下发。
  */
 @property (nonatomic, copy) NSString *sessionId;
