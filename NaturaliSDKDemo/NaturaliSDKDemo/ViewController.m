@@ -1,6 +1,6 @@
 //
 //  ViewController.m
-//  NaturaliSDKDemo
+//  KerfuSDKDemo
 //
 //  Created by 方懿 on 2018/11/30.
 //  Copyright © 2018 Naturali. All rights reserved.
@@ -8,9 +8,9 @@
 
 #import "ViewController.h"
 
-#import <NaturaliSDK.h>
+#import <KerfuSDK.h>
 
-@interface ViewController () <NATSpeechRecognizerDelegate,NADialogFlowDelegate>
+@interface ViewController () <KFSpeechRecognizerDelegate,KFDialogFlowDelegate>
 
 
 @property (weak, nonatomic) IBOutlet UITextField *agentIdLabel;
@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *linkButton;
 @property (weak, nonatomic) IBOutlet UIImageView *receiveImageView;
 
-@property (nonatomic, strong) NATSpeechRecognizer *recognizer;
+@property (nonatomic, strong) KFSpeechRecognizer *recognizer;
 
 @end
 
@@ -33,21 +33,40 @@
     [super viewDidLoad];
     
     //注册sdk
-    [NaturaliSDK registerAppId:@"yourAppId"
-                        appKey:@"yourAppKey"
-                     appSecret:@"yourAppSecret"];
+    [KerfuSDK registerAppId:@"your_app_id"
+                     appKey:@"your_app_key"
+                  appSecret:@"you_app_secret"];
     //设置userId,发送消息的用户id
-    [NaturaliSDK setUserId:@"yourUserId"];
+    [KerfuSDK setUserId:@"your_user_id"];
     
     //创建语音识别器并设置代理对象，回调将通过代理对象返回。
-    self.recognizer = [[NATSpeechRecognizer alloc] initWithDelegate:self];
+    self.recognizer = [[KFSpeechRecognizer alloc] initWithDelegate:self];
     
     //设置对话流的代理对象，用于接收对话消息.
-    [NATDialogManager sharedInstance].delegate = self;
+    [KFDialogManager sharedInstance].delegate = self;
+    
+    
+    //如果用户需要添加动态实体，可如下方式添加
+    KFDynamicEntityValue *value1 = [KFDynamicEntityValue new];
+    value1.keyword = @"邬霄云";
+    value1.aliases = @[@"alias1",@"alias2"];
+    
+    KFDynamicEntityValue *value2 = [KFDynamicEntityValue new];
+    value2.keyword = @"杜海超";
+    value2.aliases = @[@"alias3",@"alias4"];
+    
+    KFDynamicEntityValue *value3 = [KFDynamicEntityValue new];
+    value3.keyword = @"程功";
+    value2.aliases = @[@"alias5",@"alias4"];
+    
+    KFDynamicEntity *entity = [KFDynamicEntity new];
+    entity.typeName = @"Naturali-BD.客户端测试用动态实体";
+    entity.values = @[value1,value2,value3];
+    
+    [KerfuSDK addDynamicEntities:@[entity]];
 }
 
 - (IBAction)touchButtonDown:(id)sender {
-    [self stopRecord:nil];
     if (!self.agentIdLabel.text.length) {
         NSLog(@"未输入agentId");
         return;
@@ -61,10 +80,10 @@
     }
     
     //发送对话流消息,至少需要文本和agentId参数
-    NATDialogRequest *request = [[NATDialogRequest alloc] init];
+    KFDialogRequest *request = [[KFDialogRequest alloc] init];
     request.query = query;
     request.agentId = self.agentIdLabel.text;
-    [[NATDialogManager sharedInstance] sendDialogRequest:request compeltion:^(BOOL success, NSError *error) {
+    [[KFDialogManager sharedInstance] sendDialogRequest:request compeltion:^(BOOL success, NSError *error, NSString *reqId) {
         if (error) {
             NSLog(@"发送对话发生错误：\n%@",error);
         } else if (success) {
@@ -109,13 +128,19 @@
 }
 
 #pragma mark - dialog manager delegate
-- (void)didReceiveResponse:(NATDialogResponse *)response {
+- (void)didReceiveResponse:(KFDialogResponse *)response {
     //接收对话流消息，可能包含文本和多媒体资源地址.
     self.receiveTextView.text = response.content;
     [self.linkButton setTitle:response.linkUrl forState:UIControlStateNormal];
     
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:response.imageUrl]];
     self.receiveImageView.image = [UIImage imageWithData:imageData];
+}
+
+- (IBAction)endConversationAction:(id)sender {
+    [[KFDialogManager sharedInstance] endConversationWithAgentId:self.agentIdLabel.text compeltion:^(BOOL success, NSError *error, NSString *requestId) {
+        NSLog(@"conversation end:%@ , \nerror:%@",success ? @"yes" : @"no", error);
+    }];
 }
 
 @end

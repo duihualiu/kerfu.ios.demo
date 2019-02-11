@@ -3,7 +3,7 @@
 //  KerfuSDKDemo
 //
 //  Created by 方懿 on 2018/11/30.
-//  Copyright © 2018 KFurali. All rights reserved.
+//  Copyright © 2018 Naturali. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -33,11 +33,11 @@
     [super viewDidLoad];
     
     //注册sdk
-    [KerfuSDK registerAppId:@"yourAppId"
-                        appKey:@"yourAppKey"
-                     appSecret:@"yourAppSecret"];
+    [KerfuSDK registerAppId:@"your_app_id"
+                     appKey:@"your_app_key"
+                  appSecret:@"you_app_secret"];
     //设置userId,发送消息的用户id
-    [KerfuSDK setUserId:@"yourUserId"];
+    [KerfuSDK setUserId:@"your_user_id"];
     
     //创建语音识别器并设置代理对象，回调将通过代理对象返回。
     self.recognizer = [[KFSpeechRecognizer alloc] initWithDelegate:self];
@@ -48,16 +48,20 @@
     
     //如果用户需要添加动态实体，可如下方式添加
     KFDynamicEntityValue *value1 = [KFDynamicEntityValue new];
-    value1.keyword = @"keyword1";
+    value1.keyword = @"邬霄云";
     value1.aliases = @[@"alias1",@"alias2"];
     
     KFDynamicEntityValue *value2 = [KFDynamicEntityValue new];
-    value2.keyword = @"keyword2";
+    value2.keyword = @"杜海超";
     value2.aliases = @[@"alias3",@"alias4"];
     
+    KFDynamicEntityValue *value3 = [KFDynamicEntityValue new];
+    value3.keyword = @"程功";
+    value2.aliases = @[@"alias5",@"alias4"];
+    
     KFDynamicEntity *entity = [KFDynamicEntity new];
-    entity.typeName = @"typeName1";
-    entity.values = @[value1,value2];
+    entity.typeName = @"Naturali-BD.客户端测试用动态实体";
+    entity.values = @[value1,value2,value3];
     
     [KerfuSDK addDynamicEntities:@[entity]];
 }
@@ -131,6 +135,12 @@
     
     NSData *imageData = [NSData dataWithContentsOfURL:[NSURL URLWithString:response.imageUrl]];
     self.receiveImageView.image = [UIImage imageWithData:imageData];
+}
+
+- (IBAction)endConversationAction:(id)sender {
+    [[KFDialogManager sharedInstance] endConversationWithAgentId:self.agentIdLabel.text compeltion:^(BOOL success, NSError *error, NSString *requestId) {
+        NSLog(@"conversation end:%@ , \nerror:%@",success ? @"yes" : @"no", error);
+    }];
 }
 
 @end

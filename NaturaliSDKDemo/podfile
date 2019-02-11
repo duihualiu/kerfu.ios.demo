@@ -6,7 +6,7 @@ target 'NaturaliSDKDemo' do
     # use_frameworks!
     
     # Pods for DemoSDK
-    pod 'NaturaliSDK'
+    pod 'KerfuSDK'
     
 end
 
