@@ -11,19 +11,19 @@
 /**
  消息类型
  */
-typedef NS_ENUM(NSInteger, NATMessageType) {
-    NATMessageTypeText         = 0, //纯文本消息
-    NATMessageTypeImage        = 1, //图片消息
-    NATMessageTypeAudio        = 2, //音频消息
-    NATMessageTypeVideo        = 3, //视频消息
-    NATMessageTypeLink         = 4, //链接消息
-    NATMessageTypeMixed        = 5, //混合消息，包含以上消息类型中的两种或多种
-    NATMessageTypeOther        = 6, //其他消息，留作备用
+typedef NS_ENUM(NSInteger, KFMessageType) {
+    KFMessageTypeText         = 0, //纯文本消息
+    KFMessageTypeImage        = 1, //图片消息
+    KFMessageTypeAudio        = 2, //音频消息
+    KFMessageTypeVideo        = 3, //视频消息
+    KFMessageTypeLink         = 4, //链接消息
+    KFMessageTypeMixed        = 5, //混合消息，包含以上消息类型中的两种或多种
+    KFMessageTypeOther        = 6, //其他消息，留作备用
 };
 
-typedef NS_ENUM(NSInteger, NATMessageSenderType) {
-    NATMessageSenderTypeUser  = 0, //消息发送者为用户
-    NATMessageSenderTypeAgent = 1, //消息发送者为agent
+typedef NS_ENUM(NSInteger, KFMessageSenderType) {
+    KFMessageSenderTypeUser  = 0, //消息发送者为用户
+    KFMessageSenderTypeAgent = 1, //消息发送者为agent
 };
 
 @interface KFDialogResponse : NSObject
@@ -61,12 +61,12 @@ typedef NS_ENUM(NSInteger, NATMessageSenderType) {
 /**
  消息类型
  */
-@property (nonatomic, assign) NATMessageType      messageType;
+@property (nonatomic, assign) KFMessageType      messageType;
 
 /**
  消息发送者类型
  */
-@property (nonatomic, assign) NATMessageSenderType senderType;
+@property (nonatomic, assign) KFMessageSenderType senderType;
 
 /**
  消息的标题，混合消息时有值

@@ -2,7 +2,7 @@ PODS:
   - FMDB (2.7.5):
     - FMDB/standard (= 2.7.5)
   - FMDB/standard (2.7.5)
-  - KerfuSDK (0.0.1.21):
+  - KerfuSDK (0.0.1.22):
     - FMDB
     - Protobuf
   - Protobuf (3.6.1)
@@ -18,7 +18,7 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   FMDB: 2ce00b547f966261cd18927a3ddb07cb6f3db82a
-  KerfuSDK: 54b79a0616075eda8c4b3a9c6162bb3b57f91946
+  KerfuSDK: 1d61d89df5535c1bdcc33f4fd59dbcbb5c957841
   Protobuf: 1eb9700044745f00181c136ef21b8ff3ad5a0fd5
 
 PODFILE CHECKSUM: 4afe5f62535fbccdeb3705e8d655076ad9c64a8d

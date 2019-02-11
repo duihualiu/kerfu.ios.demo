@@ -1,6 +1,6 @@
 //
 //  NATDynamicEntity.h
-//  NaturaliSDK
+//  KerfuSDK
 //
 //  Created by 方懿 on 2019/1/10.
 //  Copyright © 2019 Naturali. All rights reserved.

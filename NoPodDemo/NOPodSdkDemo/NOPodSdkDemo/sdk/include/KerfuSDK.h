@@ -1,6 +1,6 @@
 //
-//  NaturaliSDK.h
-//  NaturaliSDK
+//  KerfuSDK.h
+//  KerfuSDK
 //
 //  Created by 方懿 on 2018/11/30.
 //  Copyright © 2018 Naturali. All rights reserved.
