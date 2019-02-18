@@ -74,5 +74,15 @@
  */
 @property (nonatomic, copy) NSString *extraData;
 
+/**
+ 若有意图名称，通过该属性上传
+ */
+@property (nonatomic, copy) NSString *intentName;
+
+/**
+ 若有附加属性数据，通过该属性上传
+ */
+@property (nonatomic, copy) NSDictionary *localAttrbutes;
+
 @end
 

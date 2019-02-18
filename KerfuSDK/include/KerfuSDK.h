@@ -49,4 +49,12 @@
  */
 + (void)addDynamicEntities:(NSArray<KFDynamicEntity *> *)entities forUserId:(NSString *)userId;
 
+
+/**
+ 设置全局属性
+
+ @param attributes 全局属性字典
+ */
++ (void)setGlobleAttribuites:(NSDictionary<NSString *,NSString *> *)attributes;
+
 @end
