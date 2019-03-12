@@ -17,14 +17,38 @@ typedef NS_ENUM(NSInteger, KFMessageType) {
     KFMessageTypeAudio        = 2, //音频消息
     KFMessageTypeVideo        = 3, //视频消息
     KFMessageTypeLink         = 4, //链接消息
-    KFMessageTypeMixed        = 5, //混合消息，包含以上消息类型中的两种或多种
-    KFMessageTypeOther        = 6, //其他消息，留作备用
+    KFMessageTypeCard        = 5, //卡片消息，包含标题、描述、图片、链接
+    KFMessageTypeTextList    = 6, //文本列表
+    KFMessageTypeCardList    = 7, //卡片列表
+    KFMessageTypeOther        = 8, //其他消息，留作备用
 };
 
 typedef NS_ENUM(NSInteger, KFMessageSenderType) {
     KFMessageSenderTypeUser  = 0, //消息发送者为用户
     KFMessageSenderTypeAgent = 1, //消息发送者为agent
 };
+
+@interface KFCardListItem : NSObject
+
+@property(nonatomic, copy) NSString *title;
+
+@property(nonatomic, copy) NSString *description_p;
+
+@property(nonatomic, copy) NSString *imageURL;
+
+@property(nonatomic, copy) NSString *deepLink;
+
+@end
+
+@interface KFCardList : NSObject
+
+/**
+ 卡片列表主标题
+ */
+@property (nonatomic, copy) NSString *textMsg;
+@property (nonatomic, copy) NSArray<KFCardListItem *> *cardMsgsArray;
+
+@end
 
 @interface KFDialogResponse : NSObject
 
@@ -97,6 +121,16 @@ typedef NS_ENUM(NSInteger, KFMessageSenderType) {
  消息含有网络链接时的地址字段
  */
 @property (nonatomic, copy  ) NSString            *linkUrl;
+
+/**
+ 文本列表
+ */
+@property (nonatomic, copy) NSArray<NSString *>   *textList;
+
+/**
+ 卡片列表
+ */
+@property (nonatomic, strong) KFCardList          *cardList;
 
 /**
  推荐回复agent本条消息的候选内容列表
