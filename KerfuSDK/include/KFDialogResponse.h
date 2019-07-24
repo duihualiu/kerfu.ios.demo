@@ -28,6 +28,45 @@ typedef NS_ENUM(NSInteger, KFMessageSenderType) {
     KFMessageSenderTypeAgent = 1, //消息发送者为agent
 };
 
+
+@interface KFCard : NSObject
+
+@property(nonatomic, copy) NSString *title;
+
+@property(nonatomic, copy) NSString *description_p;
+
+@property(nonatomic, copy) NSString *imageURL;
+
+@property(nonatomic, copy) NSString *deepLink;
+
+@property(nonatomic, copy) NSString *script;
+
+@property(nonatomic, copy) NSString *coreference;
+
+@end
+
+@interface KFTextListItem : NSObject
+
+@property(nonatomic, copy) NSString *content1;
+
+@property(nonatomic, copy) NSString *content2;
+
+@property(nonatomic, copy) NSString *content3;
+
+@property(nonatomic, copy) NSString *coreference;
+
+@end
+
+@interface KFTextList : NSObject
+
+@property (nonatomic, copy) NSString *header;
+
+@property(nonatomic, copy) NSMutableArray<KFTextListItem*> *textListArray;
+
+@property(nonatomic, readwrite) BOOL useCoreference;
+
+@end
+
 @interface KFCardListItem : NSObject
 
 @property(nonatomic, copy) NSString *title;
@@ -38,6 +77,8 @@ typedef NS_ENUM(NSInteger, KFMessageSenderType) {
 
 @property(nonatomic, copy) NSString *deepLink;
 
+@property(nonatomic, copy) NSString *coreference;
+
 @end
 
 @interface KFCardList : NSObject
@@ -45,8 +86,9 @@ typedef NS_ENUM(NSInteger, KFMessageSenderType) {
 /**
  卡片列表主标题
  */
-@property (nonatomic, copy) NSString *textMsg;
+@property (nonatomic, copy) NSString *header;
 @property (nonatomic, copy) NSArray<KFCardListItem *> *cardMsgsArray;
+@property(nonatomic, readwrite) BOOL useCoreference;
 
 @end
 
@@ -123,9 +165,14 @@ typedef NS_ENUM(NSInteger, KFMessageSenderType) {
 @property (nonatomic, copy  ) NSString            *linkUrl;
 
 /**
+ 卡片
+ */
+@property (nonatomic, strong) KFCard              *card;
+
+/**
  文本列表
  */
-@property (nonatomic, copy) NSArray<NSString *>   *textList;
+@property (nonatomic, strong) KFTextList          *textList;
 
 /**
  卡片列表
@@ -135,7 +182,7 @@ typedef NS_ENUM(NSInteger, KFMessageSenderType) {
 /**
  推荐回复agent本条消息的候选内容列表
  */
-@property (nonatomic, copy  ) NSArray<NSString *>   *candidates;
+@property (nonatomic, copy  ) NSArray<NSString *> *candidates;
 /**
  消息的其他附加信息，留作备用
  */
